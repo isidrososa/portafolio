@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { appRouting } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { AboutComponent } from './components/about/about.component';
-import { ItemComponent } from './components/item/item.component';
+
+import { PortfolioComponent, AboutComponent, ItemComponent } from './components/index.pages';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ItemComponent } from './components/item/item.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
