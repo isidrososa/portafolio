@@ -16,7 +16,6 @@ export class ProductsService {
       this.http.get(url)
         .subscribe(data => {
           this.products = data.json();
-          console.log(this.products);
           this.loadingProducts = true;
         });
     } else {

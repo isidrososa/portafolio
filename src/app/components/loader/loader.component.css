@@ -1,0 +1,13 @@
+.loader {
+  text-align: center;
+}
+
+
+/*
+  Color del Loading
+*/
+
+svg path,
+svg rect {
+  fill: black;
+}
