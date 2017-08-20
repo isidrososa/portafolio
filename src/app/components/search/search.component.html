@@ -1,3 +1,17 @@
-<p>
-  search works!
-</p>
+<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio animated fadeIn">
+  <div *ngIf="loadingSearch; else loader">
+    <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 rk-portfolio animated fadeIn">
+      <a *ngFor="let product of _ps.filterProducts" [routerLink]="['/product', product.cod]" class="rk-item ae-masonry__item">
+        <img src="assets/productos/{{product.url}}.jpg" alt="">
+        <div class="item-meta">
+          <h2>{{product.titulo}}</h2>
+          <p>{{product.categoria}}</p>
+        </div>
+    </a>
+    </div>
+  </div>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+</section>

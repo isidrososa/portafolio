@@ -14,7 +14,7 @@ export class ItemComponent {
   productId: string = undefined;
 
   constructor(public route: ActivatedRoute,
-    _ps: ProductsService) {
+    public _ps: ProductsService) {
     route.params.subscribe(params => {
       this.productId = params['id'];
       _ps.loadProduct(this.productId)
