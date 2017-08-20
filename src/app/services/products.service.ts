@@ -22,4 +22,9 @@ export class ProductsService {
       this.loadingProducts = true;
     }
   }
+
+  loadProduct(idx: string): any {
+    let url: string = `https://notificaciones-12221.firebaseio.com/products/${idx}.json`;
+    return this.http.get(url);
+  }
 }
