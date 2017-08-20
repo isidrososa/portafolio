@@ -20,7 +20,7 @@ export class ItemComponent {
       _ps.loadProduct(this.productId)
         .subscribe(res => {
           this.product = res.json();
-          console.log(this.product);
+          // console.log(this.product);
           this.loadingProduct = true;
         })
     });
