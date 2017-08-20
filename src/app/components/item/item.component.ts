@@ -11,13 +11,13 @@ import { ProductsService } from 'app/services/products.service';
 export class ItemComponent {
   product: any = {};
   loadingProduct: boolean = false;
+  productId: string = undefined;
 
   constructor(public route: ActivatedRoute,
     _ps: ProductsService) {
     route.params.subscribe(params => {
-      console.log(params);
-      console.log(params['id']);
-      _ps.loadProduct(params['id'])
+      this.productId = params['id'];
+      _ps.loadProduct(this.productId)
         .subscribe(res => {
           this.product = res.json();
           console.log(this.product);
