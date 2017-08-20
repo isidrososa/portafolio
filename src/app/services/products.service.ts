@@ -12,7 +12,7 @@ export class ProductsService {
 
   loadProducts(): void {
     if (this.products.length == 0) {
-      let url: string = 'https://notificaciones-12221.firebaseio.com/products.json';
+      let url: string = 'https://notificaciones-12221.firebaseio.com/products_idx.json';
       this.http.get(url)
         .subscribe(data => {
           this.products = data.json();
