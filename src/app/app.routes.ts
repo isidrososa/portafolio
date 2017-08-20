@@ -6,7 +6,7 @@ import { PortfolioComponent, AboutComponent, ItemComponent } from './components/
 const app_routes: Routes = [
   { path: 'home', component: PortfolioComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'product', component: ItemComponent },
+  { path: 'product/:id', component: ItemComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 
