@@ -25,7 +25,6 @@ export class InfoService {
     let url: string = "https://notificaciones-12221.firebaseio.com/team.json";
     this.http.get(url)
       .subscribe(data => {
-        console.log(data.json());
         this.team = data.json();
         this.loadingTeam = true;
       });
